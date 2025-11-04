@@ -97,8 +97,7 @@ class _LoanCalculatorScreenState extends State<LoanCalculatorScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Text('Monthly Payment:'),
-                        Text('\
-${_monthlyPayment.toStringAsFixed(2)}'),
+                        Text('\$${_monthlyPayment.toStringAsFixed(2)}'),
                       ],
                     ),
                     const SizedBox(height: 8),
@@ -106,8 +105,7 @@ ${_monthlyPayment.toStringAsFixed(2)}'),
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Text('Total Payment:'),
-                        Text('\
-${_totalPayment.toStringAsFixed(2)}'),
+                        Text('\$${_totalPayment.toStringAsFixed(2)}'),
                       ],
                     ),
                     const SizedBox(height: 8),
@@ -115,8 +113,7 @@ ${_totalPayment.toStringAsFixed(2)}'),
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Text('Total Interest:'),
-                        Text('\
-${_totalInterest.toStringAsFixed(2)}'),
+                        Text('\$${_totalInterest.toStringAsFixed(2)}'),
                       ],
                     ),
                   ],

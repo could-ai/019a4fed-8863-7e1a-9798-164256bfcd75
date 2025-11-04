@@ -95,11 +95,9 @@ class _LoanHistoryScreenState extends State<LoanHistoryScreen> {
                             ],
                           ),
                           const SizedBox(height: 8),
-                          Text('Amount: \
-${loan['amount'].toStringAsFixed(2)}'),
+                          Text('Amount: \$${loan['amount'].toStringAsFixed(2)}'),
                           Text('Date: ${loan['date']}'),
-                          Text('Remaining Balance: \
-${loan['remainingBalance'].toStringAsFixed(2)}'),
+                          Text('Remaining Balance: \$${loan['remainingBalance'].toStringAsFixed(2)}'),
                           if (loan['status'] == 'Active') ...[
                             const SizedBox(height: 16),
                             ElevatedButton(

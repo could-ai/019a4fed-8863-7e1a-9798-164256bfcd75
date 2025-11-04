@@ -22,8 +22,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
     if (amount > 0 && _loan != null) {
       // Mock payment processing
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Payment of \
-${amount.toStringAsFixed(2)} processed successfully!')),
+        SnackBar(content: Text('Payment of \$${amount.toStringAsFixed(2)} processed successfully!')),
       );
       Navigator.pop(context);
     } else {
@@ -61,10 +60,8 @@ ${amount.toStringAsFixed(2)} processed successfully!')),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Loan Amount: \
-${_loan!['amount'].toStringAsFixed(2)}'),
-                    Text('Remaining Balance: \
-${_loan!['remainingBalance'].toStringAsFixed(2)}'),
+                    Text('Loan Amount: \$${_loan!['amount'].toStringAsFixed(2)}'),
+                    Text('Remaining Balance: \$${_loan!['remainingBalance'].toStringAsFixed(2)}'),
                     Text('Status: ${_loan!['status']}'),
                   ],
                 ),
