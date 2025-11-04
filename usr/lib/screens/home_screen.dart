@@ -13,6 +13,10 @@ class HomeScreen extends StatelessWidget {
             icon: const Icon(Icons.person),
             onPressed: () => Navigator.pushNamed(context, '/profile'),
           ),
+          IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: () => Navigator.pushNamed(context, '/settings'),
+          ),
         ],
       ),
       body: Padding(
@@ -39,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                     const Text('No active loans'),
                     const SizedBox(height: 16),
                     Text(
-                      'Total Balance: $0.00',
+                      'Total Balance: \$0.00',
                       style: TextStyle(fontSize: 16, color: Colors.grey[600]),
                     ),
                   ],
@@ -55,6 +59,11 @@ class HomeScreen extends StatelessWidget {
             OutlinedButton(
               onPressed: () => Navigator.pushNamed(context, '/calculator'),
               child: const Text('Loan Calculator'),
+            ),
+            const SizedBox(height: 16),
+            OutlinedButton(
+              onPressed: () => Navigator.pushNamed(context, '/history'),
+              child: const Text('Loan History'),
             ),
           ],
         ),

@@ -56,7 +56,7 @@ class _LoanApplicationScreenState extends State<LoanApplicationScreen> {
                 decoration: const InputDecoration(
                   labelText: 'Loan Amount',
                   border: OutlineInputBorder(),
-                  prefixText: '$',
+                  prefixText: '\$',
                 ),
                 keyboardType: TextInputType.number,
                 validator: (value) {
@@ -87,7 +87,7 @@ class _LoanApplicationScreenState extends State<LoanApplicationScreen> {
                 decoration: const InputDecoration(
                   labelText: 'Monthly Income',
                   border: OutlineInputBorder(),
-                  prefixText: '$',
+                  prefixText: '\$',
                 ),
                 keyboardType: TextInputType.number,
                 validator: (value) {

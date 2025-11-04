@@ -48,7 +48,7 @@ class ProfileScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text('Total Loans:'),
-                        Text('2'),
+                        Text('3'),
                       ],
                     ),
                     const SizedBox(height: 8),
@@ -56,7 +56,7 @@ class ProfileScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text('Active Loans:'),
-                        Text('0'),
+                        Text('1'),
                       ],
                     ),
                   ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class LoanCalculatorScreen extends StatefulWidget {
   const LoanCalculatorScreen({super.key});
@@ -24,8 +25,8 @@ class _LoanCalculatorScreenState extends State<LoanCalculatorScreen> {
     if (principal > 0 && rate > 0 && term > 0) {
       final monthlyRate = rate / 100 / 12;
       final monthlyPayment = principal * 
-          (monthlyRate * (1 + monthlyRate).pow(term)) / 
-          ((1 + monthlyRate).pow(term) - 1);
+          (monthlyRate * pow(1 + monthlyRate, term)) / 
+          (pow(1 + monthlyRate, term) - 1);
       
       setState(() {
         _monthlyPayment = monthlyPayment;
@@ -56,7 +57,7 @@ class _LoanCalculatorScreenState extends State<LoanCalculatorScreen> {
               decoration: const InputDecoration(
                 labelText: 'Loan Amount',
                 border: OutlineInputBorder(),
-                prefixText: '$',
+                prefixText: '\$',
               ),
               keyboardType: TextInputType.number,
               onChanged: (_) => _calculateLoan(),
@@ -96,7 +97,8 @@ class _LoanCalculatorScreenState extends State<LoanCalculatorScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Text('Monthly Payment:'),
-                        Text('\$${_monthlyPayment.toStringAsFixed(2)}'),
+                        Text('\
+${_monthlyPayment.toStringAsFixed(2)}'),
                       ],
                     ),
                     const SizedBox(height: 8),
@@ -104,7 +106,8 @@ class _LoanCalculatorScreenState extends State<LoanCalculatorScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Text('Total Payment:'),
-                        Text('\$${_totalPayment.toStringAsFixed(2)}'),
+                        Text('\
+${_totalPayment.toStringAsFixed(2)}'),
                       ],
                     ),
                     const SizedBox(height: 8),
@@ -112,7 +115,8 @@ class _LoanCalculatorScreenState extends State<LoanCalculatorScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         const Text('Total Interest:'),
-                        Text('\$${_totalInterest.toStringAsFixed(2)}'),
+                        Text('\
+${_totalInterest.toStringAsFixed(2)}'),
                       ],
                     ),
                   ],
